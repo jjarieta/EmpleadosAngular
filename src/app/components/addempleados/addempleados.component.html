@@ -1,0 +1,54 @@
+
+<div class="container my-4">
+    <div class="card">
+        <div class="card-header">
+          Nuevo Empleado
+        </div>
+        <div class="card-body">
+            <form  (ngSubmit)="onSubmit()"  #formEmpleados="ngForm" >
+                <div class="row">
+               
+                    <div class="col">
+                        <label for="labelTipoNip" class="form-label"  >TIPO NIP:</label>
+                        <select class="form-control" [(ngModel)]="empleadosModel.TipoDoc" name="TipoNip" id="TipoDoc" required>
+                               <option value="CC">CEDULA DE CÍUDADANIA</option> 
+                               <option value="CE">CEDULA DE EXTRANJERIA</option> 
+                               <option value="CE">PASAPORTE</option> 
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="labelNip" class="form-label">NIP:</label>
+                      <input type="number" class="form-control" placeholder="Número de Documento" aria-label="Documento" [(ngModel)]="empleadosModel.Documento" required name="Documento" id="Documento">
+                    </div>
+                    
+                  </div>
+                  <div class="row my-4">
+                    <div class="col">
+                        <label for="labelNombre" class="form-label">NOMBRES:</label>
+                        <input type="text" class="form-control" placeholder="NOMBRES" aria-label="Nombres" [(ngModel)]="empleadosModel.Nombres" name="Nombres">
+                    </div>
+                    <div class="col">
+                        <label for="labelApellidos" class="form-label">APELLIDOS:</label>
+                        <input type="text" class="form-control" placeholder="APELLIDOS" aria-label="Apellidos" [(ngModel)]="empleadosModel.Apellidos" required name="Apellidos">
+                    </div>
+                    
+                  </div>
+                  <div class="row my-4">
+                    <div class="col">
+                        <label for="labelDireccion" class="form-label">DIRECCIÓN:</label>
+                        <input type="text" class="form-control" placeholder="DIRECCIÓN" aria-label="Direccion" [(ngModel)]="empleadosModel.Direccion" required name="Direccion">
+                    </div>
+                    <div class="col">
+                        <label for="labelApellidos" class="form-label">TELÉFONO:</label>
+                        <input type="number" class="form-control" placeholder="TELÉFONO" aria-label="Telefono" [(ngModel)]="empleadosModel.Telefono" required name="Telefono">
+                    </div>
+                    
+                  </div>
+                <button class="btn  btn-primary" type="submit" >GUARDAR</button>
+    
+            </form>
+           
+            
+    </div>
+    
+</div>
